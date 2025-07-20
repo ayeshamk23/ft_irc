@@ -1,4 +1,4 @@
-#include "Server.hpp"
+ #include "Server.hpp"
 
 
 int main(int argc, char **argv) 
@@ -21,3 +21,33 @@ int main(int argc, char **argv)
 
     return 0;
 }
+
+
+
+
+
+
+//this is inshas tester for command dispatcher and client authentication
+/* 
+#include "CommandDispatcher.hpp"
+#include "Client.hpp"
+
+int main() {
+    Client client;
+    CommandDispatcher dispatcher;
+
+    dispatcher.dispatchCommand(client,
+        "PASS mypasword\r\n"
+        "NICK coolgirl\r\n"
+        "USER me 0 * :Cool Girl\r\n"
+    );
+
+    if (client.isAuthenticated()) {
+        std::cout << "Client is authenticated and ready!" << std::endl;
+        std::cout << "Nickname: " << client.getNickname() << std::endl;
+        std::cout << "Username: " << client.getUsername() << std::endl;
+    } else {
+        std::cout << "Client authentication failed." << std::endl;
+    }
+}
+*/
