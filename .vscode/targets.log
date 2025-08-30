@@ -7,7 +7,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
 
-# Make data base, printed on Fri Aug 29 17:26:24 2025
+# Make data base, printed on Sat Aug 30 16:16:25 2025
 
 # Variables
 
@@ -115,8 +115,6 @@ MFLAGS = -Rrqp
 XPC_SERVICE_NAME = application.com.microsoft.VSCode.558638.558644
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
-# environment
-VSCODE_L10N_BUNDLE_LOCATION = 
 # automatic
 +F = $(notdir $+)
 # environment
@@ -142,7 +140,7 @@ LANG = C
 # environment
 VSCODE_PID = 45388
 # variable set hash-table stats:
-# Load=65/1024=6%, Rehash=0, Collisions=5/97=5%
+# Load=64/1024=6%, Rehash=0, Collisions=5/96=5%
 
 # Pattern-specific Variable Values
 
@@ -150,9 +148,9 @@ VSCODE_PID = 45388
 
 # Directories
 
-# . (device 16777229, inode 37488412): 13 files, no impossibilities.
+# . (device 16777229, inode 37488412): 17 files, no impossibilities.
 
-# 13 files, no impossibilities in 1 directories.
+# 17 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -279,7 +277,7 @@ allCXX:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Fri Aug 29 17:26:24 2025
+# Finished Make data base on Sat Aug 30 16:16:25 2025
 
  
 Makefile:34: warning: overriding commands for target `clean'
