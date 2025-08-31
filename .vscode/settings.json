@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "files.associations": {
         "ostream": "cpp",
         "map": "cpp",
@@ -63,4 +64,7 @@
         "unordered_map": "cpp",
         "utility": "cpp"
     }
+=======
+    "makefile.extensionOutputFolder": "./.vscode"
+>>>>>>> 248578b9cfeda77175aa57bbcdeff586c7ab3824
 }

@@ -3,6 +3,7 @@
 
 #include <string>  // Store string like password, name
 #include <set>     // Store unique elements like FDs
+#include <map>     // For nickname → operator map
 
 /*******************************************************
  * Channel.hpp
@@ -42,9 +43,9 @@ private:
     bool _hasUserLimit;
 
     // Containers
-    std::set<int> _members;     // All current clients in the channel
-    std::set<int> _operators;   // Clients with operator status
-    std::set<int> _invited;     // Invited clients (for +i)
+    std::set<int> _members;                        // All current clients in the channel
+    std::map<std::string, bool> _operators;        // Nickname → isOperator
+    std::set<int> _invited;                        // Invited clients (for +i)
 
 public:
     // Constructor
@@ -52,13 +53,13 @@ public:
 
     // Member management
     void addMember(int fd);
-    void removeMember(int fd);
+    void removeMember(int fd, const std::string& nickname);
     bool hasMember(int fd) const;
 
     // Operator management
-    void addOperator(int fd);
-    void removeOperator(int fd);
-    bool isOperator(int fd) const;
+    void addOperator(const std::string& nickname);
+    void removeOperator(const std::string& nickname);
+    bool isOperator(const std::string& nickname) const;
 
     // Invite management
     void addInvited(int fd);
@@ -88,6 +89,7 @@ public:
     // Info access
     const std::string& getName() const;
     int getUserCount() const;
+
 };
 
 #endif // CHANNEL_HPP
