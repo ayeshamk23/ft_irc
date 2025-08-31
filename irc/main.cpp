@@ -27,27 +27,32 @@ int main(int argc, char **argv)
 
 
 
-//this is inshas tester for command dispatcher and client authentication
-/* 
-#include "CommandDispatcher.hpp"
-#include "Client.hpp"
+// //this is inshas tester for command dispatcher and client authentication
 
-int main() {
-    Client client;
-    CommandDispatcher dispatcher;
+// #include "CommandDispatcher.hpp"
+// #include "Client.hpp"
 
-    dispatcher.dispatchCommand(client,
-        "PASS mypasword\r\n"
-        "NICK coolgirl\r\n"
-        "USER me 0 * :Cool Girl\r\n"
-    );
+// int main() {
+//     Client client;
+//     CommandDispatcher dispatcher;
 
-    if (client.isAuthenticated()) {
-        std::cout << "Client is authenticated and ready!" << std::endl;
-        std::cout << "Nickname: " << client.getNickname() << std::endl;
-        std::cout << "Username: " << client.getUsername() << std::endl;
-    } else {
-        std::cout << "Client authentication failed." << std::endl;
-    }
+//     dispatcher.dispatchCommand(client,
+//         "PASS mypasword\r\n"
+//         "NICK coolgirl\r\n"
+//         "USER me 0 * :Cool Girl\r\n"
+//     );
+
+//     if (client.isAuthenticated()) {
+//         std::cout << "Client is authenticated and ready!" << std::endl;
+//         std::cout << "Nickname: " << client.getNickname() << std::endl;
+//         std::cout << "Username: " << client.getUsername() << std::endl;
+//     } else {
+//         std::cout << "Client authentication failed." << std::endl;
+//     }
+// }
+
+int main()
+{
+
+    parse(cmd, fd);
 }
-*/
